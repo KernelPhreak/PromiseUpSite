@@ -4,13 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+
 import {
   Mail,
   MapPin,
@@ -59,7 +53,6 @@ export default function Contact() {
       phone: form.phone || null,
       reason: form.reason,
       message: form.message,
-      is_read: false,
     };
 
     const { error } = await supabase
@@ -296,24 +289,22 @@ export default function Contact() {
                       <Label className="font-inter font-medium">
                         Reason *
                       </Label>
-                      <Select
+                      <select
+                        required
                         value={form.reason}
-                        onValueChange={(v) =>
-                          setForm({ ...form, reason: v })
+                        onChange={(e) =>
+                          setForm({ ...form, reason: e.target.value })
                         }
+                        className="flex h-12 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       >
-                        <SelectTrigger className="rounded-xl h-12">
-                          <SelectValue placeholder="Select a reason" />
-                        </SelectTrigger>
+                        <option value="">Select a reason</option>
 
-                        <SelectContent>
-                          {reasons.map((r) => (
-                            <SelectItem key={r.value} value={r.value}>
-                              {r.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                        {reasons.map((r) => (
+                          <option key={r.value} value={r.value}>
+                            {r.label}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
 

@@ -5,13 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+
 import {
   Heart,
   Camera,
@@ -120,7 +114,6 @@ export default function Donate() {
       phone: form.phone || null,
       donation_type: form.donation_type,
       message: form.message || null,
-      is_read: false,
     };
 
     const { error } = await supabase
@@ -425,24 +418,22 @@ export default function Donate() {
                   <Label className="font-inter font-medium">
                     Donation Type *
                   </Label>
-                  <Select
+                  <select
+                    required
                     value={form.donation_type}
-                    onValueChange={(v) =>
-                      setForm({ ...form, donation_type: v })
+                    onChange={(e) =>
+                      setForm({ ...form, donation_type: e.target.value })
                     }
+                    className="flex h-12 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    <SelectTrigger className="rounded-xl h-12">
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
+                    <option value="">Select type</option>
 
-                    <SelectContent>
-                      {donationTypes.map((t) => (
-                        <SelectItem key={t.value} value={t.value}>
-                          {t.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                    {donationTypes.map((t) => (
+                      <option key={t.value} value={t.value}>
+                        {t.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
 
