@@ -138,7 +138,12 @@ export const AuthProvider = ({ children }) => {
           return;
         }
 
-        await checkUserAuth();
+        // Do not run Supabase calls directly inside the auth-state callback.
+        // Defer the full profile/session refresh so tab-focus token refreshes cannot
+        // leave the whole app sitting behind the global loading screen.
+        setTimeout(() => {
+          if (mounted) checkUserAuth();
+        }, 0);
       }
     );
 

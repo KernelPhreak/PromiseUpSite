@@ -16,7 +16,15 @@ const nav = [
 
 export default function AdminLayout() {
   const location = useLocation();
-  const { isAuthenticated, isAdmin, signOut, user } = useAuth();
+  const { isAuthenticated, isAdmin, isLoadingAuth, authChecked, logout, user } = useAuth();
+
+  if (isLoadingAuth || !authChecked) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   if (!isAuthenticated) return <Navigate to="/login" replace state={{ from: location }} />;
   if (!isAdmin) return <Navigate to="/" replace />;
@@ -37,7 +45,7 @@ export default function AdminLayout() {
         </nav>
         <div className="pt-4 border-t border-border space-y-3">
           <p className="font-inter text-xs text-muted-foreground truncate">{user?.email}</p>
-          <Button variant="outline" className="w-full justify-start" onClick={signOut}><LogOut className="w-4 h-4 mr-2" /> Sign out</Button>
+          <Button variant="outline" className="w-full justify-start" onClick={() => logout()}><LogOut className="w-4 h-4 mr-2" /> Sign out</Button>
         </div>
       </aside>
 
@@ -45,7 +53,7 @@ export default function AdminLayout() {
         <header className="lg:hidden bg-card border-b border-border p-4">
           <div className="flex items-center justify-between mb-4">
             <p className="font-outfit font-bold text-xl">Promise Up Admin</p>
-            <Button variant="outline" size="sm" onClick={signOut}>Sign out</Button>
+            <Button variant="outline" size="sm" onClick={() => logout()}>Sign out</Button>
           </div>
           <nav className="flex gap-2 overflow-x-auto pb-1">
             {nav.map((item) => <NavLink key={item.to} to={item.to} end={item.to === '/admin'} className={({ isActive }) => cn('shrink-0 rounded-full px-3 py-2 text-sm', isActive ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground')}>{item.label}</NavLink>)}
