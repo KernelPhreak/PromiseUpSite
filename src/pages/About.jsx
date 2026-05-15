@@ -90,7 +90,7 @@ export default function About() {
                 Promise Up exists to remove barriers and create real
                 opportunities for at-risk youth, underprivileged families, and
                 community members. We provide free photography, school support,
-                community events, and hobby programs — because everyone deserves
+                community events, and hobby programs, because everyone deserves
                 access to the things that build confidence, connection, and
                 hope.
               </p>
@@ -111,7 +111,7 @@ export default function About() {
                 A community where no child, teen, or family is held back by
                 financial circumstances. We envision a Southeast Missouri where
                 every young person has access to enriching experiences, quality
-                memories, and the essentials they need to thrive — all provided
+                memories, and the essentials they need to thrive, all provided
                 through the generosity and commitment of their neighbors.
               </p>
             </div>
@@ -140,7 +140,7 @@ export default function About() {
             <div className="font-inter text-muted-foreground leading-relaxed space-y-4 text-left sm:text-center">
               <p>
                 Promise Up was born from a simple observation: too many young
-                people in our community were missing out — not because of a lack
+                people in our community were missing out, not because of a lack
                 of talent or desire, but because of a lack of resources. Kids
                 who couldn't afford school photos. Families who struggled to buy
                 basic supplies. Teens with no access to enriching activities.
@@ -149,7 +149,7 @@ export default function About() {
               <p>
                 We started small, offering free portrait sessions to a handful
                 of students. Word spread. The need was far greater than we
-                imagined. So we grew — adding school supply drives, community
+                imagined. So we grew, adding school supply drives, community
                 events, and hobby programs. Each service was designed with one
                 principle in mind:{' '}
                 <strong>remove the barrier, and people will rise.</strong>
@@ -181,7 +181,7 @@ export default function About() {
 
             <p className="mt-4 font-inter text-muted-foreground max-w-xl mx-auto">
               The people behind Promise Up are neighbors, parents, and community
-              members — just like you.
+              members, just like you.
             </p>
           </div>
 

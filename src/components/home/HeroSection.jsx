@@ -30,7 +30,7 @@ export default function HeroSection() {
             </div>
 
             <h1 className="font-outfit font-bold text-4xl sm:text-5xl lg:text-6xl text-foreground leading-tight text-balance">
-              Free community support, photos, supplies, and events —{' '}
+              Free community support, photos, supplies, and events {' '}
               <span className="text-primary">powered by Promise Up.</span>
             </h1>
 
@@ -71,8 +71,8 @@ export default function HeroSection() {
               </div>
               <div className="w-px bg-border hidden sm:block" />
               <div className="hidden sm:block">
-                <p className="font-outfit font-bold text-2xl text-foreground">4+</p>
-                <p className="font-inter text-sm text-muted-foreground">Program Areas</p>
+                <p className="font-outfit font-bold text-2xl text-foreground">500+</p>
+                <p className="font-inter text-sm text-muted-foreground">Teens Served</p>
               </div>
             </div>
           </motion.div>

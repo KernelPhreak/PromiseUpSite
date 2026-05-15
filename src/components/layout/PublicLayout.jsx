@@ -54,7 +54,7 @@ export default function PublicLayout() {
 
       <footer className="border-t border-border bg-muted/30 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-4">
-          <p className="font-inter text-sm text-muted-foreground">© {new Date().getFullYear()} Promise Up. Free community services for Southeast Missouri.</p>
+          <p className="font-inter text-sm text-muted-foreground">© {new Date().getFullYear()} Promise Up.</p>
           <Link to="/admin" className="font-inter text-sm text-muted-foreground hover:text-primary">Admin</Link>
         </div>
       </footer>

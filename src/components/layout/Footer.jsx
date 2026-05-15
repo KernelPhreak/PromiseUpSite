@@ -73,7 +73,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Promise Up. All rights reserved.
           </p>
           <p className="font-inter text-white/50 text-sm flex items-center gap-1">
-            Based in Cape Girardeau — here for you <Heart className="w-3 h-3 text-primary" />
+            Based in Cape Girardeau, here for you <Heart className="w-3 h-3 text-primary" />
           </p>
         </div>
       </div>

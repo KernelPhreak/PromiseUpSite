@@ -7,7 +7,7 @@ const services = [
   {
     icon: Camera,
     title: 'Free Photo Sessions',
-    description: 'School photos, sports photos, prom, family portraits, and special community photo events — all completely free.',
+    description: 'School photos, sports photos, prom, family portraits, and special community photo events, all completely free.',
     gradient: 'from-amber-50 to-orange-50',
   },
   {
@@ -40,7 +40,7 @@ export default function ServiceCards() {
             Every service is free. Always.
           </h2>
           <p className="mt-4 font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
-            We believe everyone deserves access to opportunities. No cost, no catch — just community helping community.
+            We believe everyone deserves access to opportunities. No cost, no catch, just community helping community.
           </p>
         </div>
 

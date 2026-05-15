@@ -18,10 +18,10 @@ export default function ContactCallout() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-outfit font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">
-            Schools, families, nonprofits, churches — we're here for you.
+            Schools, families, nonprofits, churches, we're here for you.
           </h2>
           <p className="mt-6 font-inter text-lg text-white/70 max-w-2xl mx-auto">
-            Whether you need services, want to partner, or would like to volunteer — we'd love to connect with you.
+            Whether you need services, want to partner, or would like to volunteer, we'd love to connect with you.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mt-8">
